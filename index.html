@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUMINA — Premium online prodavnica</title>
+  <meta name="description" content="LUMINA — premium online prodavnica sa 20 pažljivo odabranih proizvoda. Plaćanje pouzećem, brza dostava, podrška 0612006959." />
+  <meta name="theme-color" content="#07070d" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Pozadinski svetleći efekti -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Gornja traka sa kontaktom -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span class="topbar-msg">🚚 Besplatna dostava za porudžbine preko 10.000 RSD · Plaćanje pouzećem</span>
+      <a class="topbar-phone" href="tel:0612006959" aria-label="Pozovite podršku 0612006959">
+        <span class="pulse-dot"></span> Podrška: <strong>0612006959</strong>
+      </a>
+    </div>
+  </div>
+
+  <!-- Zaglavlje -->
+  <header class="header" id="header">
+    <div class="container header-inner glass">
+      <a href="#top" class="logo" aria-label="LUMINA početna">
+        <span class="logo-mark">L</span>
+        <span class="logo-text">LUMINA</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Glavna navigacija">
+        <a href="#proizvodi">Proizvodi</a>
+        <a href="#kako">Kako poručiti</a>
+        <a href="#poverenje">Zašto mi</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <a class="btn btn-glow btn-sm header-cta" href="tel:0612006959">📞 0612006959</a>
+
+      <button class="burger" id="burger" aria-label="Otvori meni" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <span class="chip reveal">✦ Nova kolekcija 2026</span>
+          <h1 class="reveal" style="--d:.08s">
+            Stil koji <span class="gradient-text">svetli</span>.<br />
+            Kvalitet kome <span class="gradient-text">verujete</span>.
+          </h1>
+          <p class="hero-sub reveal" style="--d:.16s">
+            Pažljivo odabrana kolekcija od 20 premium proizvoda — tehnologija, moda i dom.
+            Poručite za minut, platite tek kada paket stigne na vaša vrata.
+          </p>
+          <div class="hero-actions reveal" style="--d:.24s">
+            <a href="#proizvodi" class="btn btn-glow">Pogledaj proizvode</a>
+            <a href="#kako" class="btn btn-ghost">Kako poručiti</a>
+          </div>
+
+          <ul class="hero-stats reveal" style="--d:.32s">
+            <li><strong data-count="20">0</strong><span>premium proizvoda</span></li>
+            <li><strong data-count="48" data-suffix="h">0</strong><span>brza isporuka</span></li>
+            <li><strong data-count="14" data-suffix=" dana">0</strong><span>povraćaj novca</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" style="--d:.2s" aria-hidden="true">
+          <div class="hero-card glass">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80" alt="" loading="eager" onerror="this.style.display='none'" />
+            <div class="hero-card-badge glass">★ Bestseler</div>
+          </div>
+          <div class="float-chip glass fc-1">🔒 Sigurna kupovina</div>
+          <div class="float-chip glass fc-2">⚡ Isporuka 24–48h</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAKA POVERENJA -->
+    <section class="strip container reveal">
+      <div class="strip-inner glass">
+        <div class="strip-item"><span>🚚</span><div><strong>Brza dostava</strong><small>Širom Srbije</small></div></div>
+        <div class="strip-item"><span>💵</span><div><strong>Plaćanje pouzećem</strong><small>Platite pri preuzimanju</small></div></div>
+        <div class="strip-item"><span>↩️</span><div><strong>14 dana povraćaj</strong><small>Bez objašnjenja</small></div></div>
+        <div class="strip-item"><span>🎧</span><div><strong>Podrška 0612006959</strong><small>Tu smo za vas</small></div></div>
+      </div>
+    </section>
+
+    <!-- PROIZVODI -->
+    <section class="section container" id="proizvodi">
+      <div class="section-head">
+        <span class="chip reveal">Kolekcija</span>
+        <h2 class="reveal" style="--d:.06s">Naših <span class="gradient-text">20</span> izabranih</h2>
+        <p class="reveal" style="--d:.12s">Svaki proizvod je ručno odabran zbog kvaliteta, dizajna i vrednosti za novac.</p>
+      </div>
+
+      <div class="grid" id="productGrid" aria-live="polite"></div>
+    </section>
+
+    <!-- KAKO PORUČITI -->
+    <section class="section container" id="kako">
+      <div class="section-head">
+        <span class="chip reveal">Jednostavno</span>
+        <h2 class="reveal" style="--d:.06s">Poručivanje u <span class="gradient-text">3 koraka</span></h2>
+      </div>
+      <div class="steps">
+        <article class="step glass reveal">
+          <span class="step-num">01</span>
+          <h3>Izaberite proizvod</h3>
+          <p>Pregledajte kolekciju i kliknite na dugme „Kupi“ kod proizvoda koji vam se sviđa.</p>
+        </article>
+        <article class="step glass reveal" style="--d:.1s">
+          <span class="step-num">02</span>
+          <h3>Unesite podatke</h3>
+          <p>Upišite ime i prezime, adresu, grad i kontakt telefon. Ništa više nije potrebno.</p>
+        </article>
+        <article class="step glass reveal" style="--d:.2s">
+          <span class="step-num">03</span>
+          <h3>Platite pri preuzimanju</h3>
+          <p>Kurir stiže u roku od 24–48h. Plaćate gotovinom tek kada preuzmete paket.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- POVERENJE -->
+    <section class="section container" id="poverenje">
+      <div class="trust glass reveal">
+        <div class="trust-text">
+          <span class="chip">Zašto LUMINA</span>
+          <h2>Kupovina bez <span class="gradient-text">brige</span></h2>
+          <p>Ne tražimo unapred nikakvu uplatu niti podatke o kartici. Poručite, sačekajte kurira,
+             pregledajte paket i tek tada platite. Ako nešto nije kako ste očekivali — imate 14 dana za povraćaj.</p>
+          <a href="tel:0612006959" class="btn btn-glow">📞 Pozovite nas: 0612006959</a>
+        </div>
+        <ul class="trust-list">
+          <li><span>✔</span> Bez plaćanja unapred</li>
+          <li><span>✔</span> Provera paketa pre uplate</li>
+          <li><span>✔</span> Povraćaj u roku od 14 dana</li>
+          <li><span>✔</span> Podrška na telefon radnim danima</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- PODNOŽJE / KONTAKT -->
+  <footer class="footer" id="kontakt">
+    <div class="container footer-inner glass">
+      <div>
+        <a href="#top" class="logo">
+          <span class="logo-mark">L</span>
+          <span class="logo-text">LUMINA</span>
+        </a>
+        <p class="footer-note">Premium proizvodi, jasna pravila, pouzdana isporuka.</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Kontakt podrške</h4>
+        <a class="footer-phone" href="tel:0612006959">📞 0612006959</a>
+        <a class="footer-mail" href="mailto:ovojebroj01@gmail.com">✉️ ovojebroj01@gmail.com</a>
+      </div>
+      <div class="footer-links">
+        <h4>Navigacija</h4>
+        <a href="#proizvodi">Proizvodi</a>
+        <a href="#kako">Kako poručiti</a>
+        <a href="#poverenje">Zašto mi</a>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year"></span> LUMINA. Sva prava zadržana.</p>
+  </footer>
+
+  <!-- MODAL: PORUDŽBINA -->
+  <div class="modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-close></div>
+
+    <div class="modal-box glass">
+      <button class="modal-close" type="button" aria-label="Zatvori" data-close>✕</button>
+
+      <!-- Forma -->
+      <div class="modal-view" id="formView">
+        <span class="chip">Naručivanje</span>
+        <h3 id="modalTitle">Završite porudžbinu</h3>
+
+        <div class="order-product">
+          <img id="mpImg" src="" alt="" />
+          <div>
+            <strong id="mpName">—</strong>
+            <span id="mpPrice" class="mp-price">—</span>
+          </div>
+        </div>
+
+        <form id="orderForm" novalidate>
+          <div class="field">
+            <label for="fName">Ime i prezime</label>
+            <input type="text" id="fName" name="ime_prezime" autocomplete="name" placeholder="npr. Marko Marković" required minlength="3" />
+            <small class="err"></small>
+          </div>
+
+          <div class="field">
+            <label for="fAddress">Adresa (ulica i broj)</label>
+            <input type="text" id="fAddress" name="adresa" autocomplete="street-address" placeholder="npr. Bulevar Mihajla Pupina 10, stan 5" required minlength="5" />
+            <small class="err"></small>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="fCity">Grad</label>
+              <input type="text" id="fCity" name="grad" autocomplete="address-level2" placeholder="npr. Beograd" required minlength="2" />
+              <small class="err"></small>
+            </div>
+            <div class="field">
+              <label for="fPhone">Kontakt telefon</label>
+              <input type="tel" id="fPhone" name="telefon" autocomplete="tel" inputmode="tel" placeholder="npr. 061 234 5678" required />
+              <small class="err"></small>
+            </div>
+          </div>
+
+          <div class="row row-qty">
+            <div class="field">
+              <label for="fQty">Količina</label>
+              <div class="qty">
+                <button type="button" id="qtyMinus" aria-label="Smanji količinu">−</button>
+                <input type="number" id="fQty" name="kolicina" value="1" min="1" max="10" inputmode="numeric" />
+                <button type="button" id="qtyPlus" aria-label="Povećaj količinu">+</button>
+              </div>
+            </div>
+            <div class="total">
+              <span>Ukupno</span>
+              <strong id="mTotal">—</strong>
+            </div>
+          </div>
+
+          <!-- Honeypot protiv botova -->
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="honey" aria-hidden="true" />
+
+          <p class="pay-note">💵 Plaćanje pouzećem — gotovinom kuriru pri preuzimanju.</p>
+
+          <p class="form-error" id="formError" hidden></p>
+
+          <button type="submit" class="btn btn-glow btn-block" id="submitBtn">
+            <span class="btn-label">Potvrdi porudžbinu</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Uspeh -->
+      <div class="modal-view success" id="successView" hidden>
+        <div class="check" aria-hidden="true">
+          <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="none"/><path fill="none" d="M14 27l8 8 16-17"/></svg>
+        </div>
+        <h3>Porudžbina je primljena!</h3>
+        <p class="success-text">Hvala vam, <strong id="sName"></strong>. Kontaktiraćemo vas na <strong id="sPhone"></strong> radi potvrde isporuke.</p>
+        <div class="receipt">
+          <div><span>Broj porudžbine</span><strong id="sId"></strong></div>
+          <div><span>Proizvod</span><strong id="sProduct"></strong></div>
+          <div><span>Ukupno za plaćanje</span><strong id="sTotal"></strong></div>
+        </div>
+        <p class="support-line">Pitanja? Pozovite nas: <a href="tel:0612006959">0612006959</a></p>
+        <button type="button" class="btn btn-ghost btn-block" data-close>Nastavi kupovinu</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
